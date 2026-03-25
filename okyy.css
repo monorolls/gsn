@@ -1,0 +1,129 @@
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .main-wrapper {
+            max-width: 480px;
+            width: 100%;
+            background-color: #000;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top-bar {
+            background-color: #333;
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            width: 100%;
+        }
+
+        .full-width-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        .text-content {
+            padding: 25px 20px;
+            text-align: left; 
+        }
+
+        .congrats-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .steps-list {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .step-item {
+            margin-bottom: 15px;
+        }
+
+        .btn-container {
+            text-align: center;
+            width: 100%;
+        }
+
+        .claim-btn {
+            background: linear-gradient(180deg, #ff4081 0%, #e91e63 100%);
+            color: white;
+            padding: 16px 50px;
+            border: none;
+            border-radius: 50px;
+            font-size: 22px;
+            font-weight: bold;
+            font-style: italic;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(233, 30, 99, 0.5);
+            transition: transform 0.2s;
+            display: inline-block;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .claim-btn:active {
+            transform: scale(0.96);
+        }
+
+        #lockerOverlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: #000;
+            z-index: 10000;
+            overflow-y: auto;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .locker-content-fullscreen {
+            max-width: 475px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 30px;
+        }
+.instruction-text{
+padding:25px 20px 15px;
+font-size:0.95em;
+color:#fff;
+line-height:1.6;
+}
+        #my-locker-header { 
+            width:100%; height:250px; 
+            background:url('https://cdn.jsdelivr.net/gh/monorolls/gsn@main/y (1).webp') center/cover no-repeat; 
+        }
+
+        .instruction-text-locker { 
+            padding: 25px 20px 15px; 
+            font-size: 0.95em; color: #000; line-height: 1.6; text-align: center;
+        }
+
+        #offerContainer { padding: 0 15px; display: flex; flex-direction: column; gap: 20px; }
+
+        .offer-card { 
+            background: linear-gradient(0deg,#0066cc,#0066cc 45%,#0066cc 75%,#0066cc 100%); 
+            padding: 12px 18px; border-radius: 40px; border: 1px solid #ffcc00; 
+            cursor: pointer; display: flex; align-items: center; gap: 15px; color: white; text-decoration: none;
+        }
+
+        .offer-icon { width: 50px; height: 50px; border-radius: 50%; border: 3px solid #0066cc; background: #fff;}
+        .locker-footer-image { width: 100%; height: auto; display: block; margin-top: 20px;}
