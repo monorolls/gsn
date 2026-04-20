@@ -1,0 +1,167 @@
+        :root {
+            --primary-color: #007aff;
+            --secondary-bg: #ffffff;
+            --main-bg: #f2f2f7;
+            --text-dark: #1c1c1e;
+            --text-gray: #8e8e93;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--main-bg);
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #d1d1d6;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 9px;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header {
+            padding: 40px 5% 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        header h1 { font-size: 2.2rem; font-weight: 800; margin: 0; letter-spacing: -0.8px; line-height: 1.2; }
+        header p { color: var(--text-gray); margin-top: 10px; font-size: 1.1rem; line-height: 1.5; font-weight: 500;}
+
+        #offerContainer {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 5% 50px;
+            flex: 1;
+        }
+
+        .app-card {
+            background: var(--secondary-bg);
+            border-radius: 24px;
+            padding: 22px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(0,0,0,0.03);
+            position: relative;
+        }
+
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        }
+
+        .app-icon {
+            width: 85px;
+            height: 85px;
+            border-radius: 19px;
+            object-fit: cover;
+            margin-right: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+        }
+
+        .app-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .app-name {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 6px;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .app-desc {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .download-btn {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: fit-content;
+        }
+
+        .download-icon {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .app-card:hover .download-btn {
+            background: #005ecb;
+            box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+        }
+
+        footer {
+            padding: 30px 5%;
+            text-align: center;
+            background: #ffffff;
+            border-top: 1px solid #d1d1d6;
+            margin-top: auto;
+        }
+
+        .copyright {
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+
+        .loading {
+            text-align: center;
+            grid-column: 1 / -1;
+            padding: 80px;
+            font-weight: 600;
+            color: var(--text-gray);
+        }
+
+        @media (max-width: 500px) {
+            header h1 { font-size: 1.8rem; }
+            #offerContainer { grid-template-columns: 1fr; padding: 0 15px 40px;}
+            .app-icon { width: 75px; height: 75px; margin-right: 15px; }
+        }
