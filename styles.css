@@ -1,0 +1,252 @@
+     :root {
+            --apple-bg: #f5f5f7;
+            --apple-card: #ffffff;
+            --primary-gradient: linear-gradient(135deg, #007aff 0%, #0056b3 100%);
+            --apple-text-main: #1d1d1f;
+            --apple-text-dim: #86868b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+  background-color: #f5f5f7;
+          margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            color: var(--apple-text-main);
+        }
+
+        .header-section {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .cover-photo {
+            width: 100%;
+            height: 160px; 
+            overflow: hidden;
+            border-bottom: 1px solid #d1d1d6;
+        }
+
+        .cover-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+
+        .profile-avatar-wrap {
+            position: relative;
+            margin-top: -60px; 
+            display: inline-block;
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 6px solid white;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        .verified-badge-img {
+            position: absolute;
+            bottom: 5px;
+            right: 9px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+        }
+
+        .profile-info {
+            text-align: center;
+            padding: 15px 20px 0;
+            max-width: 600px;
+        }
+
+        .profile-name {
+            font-size: 1.6rem;
+            font-weight: 800;
+            margin: 0 0 8px;
+        }
+
+        .profile-bio {
+            font-size: 1rem;
+            color: var(--apple-text-dim);
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        #offerContainer {
+            width: 95%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding-bottom: 60px;
+        }
+
+        .offer-card {
+  background-color: #0066cc;
+          border-radius: 20px;
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        .offer-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+            border-color: #007aff44;
+        }
+
+        .offer-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 14px;
+            object-fit: cover;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .offer-details {
+            flex: 1;
+            text-align: left; 
+        }
+
+        .offer-anchor {
+            font-weight: 600;
+            font-size: 1rem;
+          color: #fff;
+            line-height: 1.3;
+            margin: 0;
+        }
+
+        .claim-btn {
+  background-color: #fff;
+          color: #000;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            flex-shrink: 0;
+            white-space: nowrap;
+            box-shadow: 0 4px 12px rgba(0, 122, 255, 0.3);
+        }
+
+        @media (max-width: 500px) {
+            .offer-card { padding: 12px 15px; }
+            .offer-icon { width: 50px; height: 50px; }
+            .offer-anchor { font-size: 0.9rem; }
+            .cover-photo { height: 120px; }
+        }
+    @import url('https://fonts.googleapis.com/css?family=Lato:300,400');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 60vh;
+      background: linear-gradient(135deg, #0077b6, #00B0FF);
+      color: white;
+      text-align: center;
+      padding: 0 1rem;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-top: 1rem;
+      opacity: 0.85;
+    }
+
+    .wave-wrapper {
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .waves {
+      display: block;
+      width: 100%;
+      height: 20vh;
+      min-height: 120px;
+      max-height: 200px;
+    }
+
+    .parallax > use {
+      animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+    }
+    .parallax > use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+    .parallax > use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+    .parallax > use:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 13s;
+    }
+    .parallax > use:nth-child(4) {
+      animation-delay: -5s;
+      animation-duration: 20s;
+    }
+
+    @keyframes move-forever {
+      0%   { transform: translate3d(-90px, 0, 0); }
+      100% { transform: translate3d(85px,  0, 0); }
+    }
+
+  
+
+    .content h2 {
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .content p {
+      font-size: 16px;
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+      .waves {
+        height: 60px;
+        min-height: 60px;
+      }
+    }
